@@ -8,7 +8,7 @@ COPY hostingstart.html /home/site/wwwroot/hostingstart.html
 COPY staticsite.rb /opt/staticsite.rb
 
 RUN apt-get update -qq \
-    && apt-get install -y nodejs openssh-server vim curl wget tcptraceroute --no-install-recommends \
+    && apt-get install -y nodejs openssh-server vim curl wget freetds-bin bash tcptraceroute --no-install-recommends \
     && echo "root:Docker!" | chpasswd \
     && echo "cd /home" >> /etc/bash.bashrc
 
